@@ -38,7 +38,7 @@ void pic_init()
    out(icw3.raw, PIC_ICW3(PIC1));
 
    icw3.raw = 0;
-   icw3.slave.id = 2;
+   icw3.slave.id = 3;
    out(icw3.raw, PIC_ICW3(PIC2));
 
    /*

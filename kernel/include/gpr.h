@@ -143,11 +143,19 @@ typedef union general_purpose_registers_context
       v;                                                                \
    })
 
+#define get_eip()                                                    \
+   ({                                                                   \
+      uint32_t v;                                                       \
+      asm volatile( "get_eip: mov [esp], %0 ; ret ; call get_eip":"=m"(v)::"memory" );             \
+      v;                                                                \
+   })
+
 #define get_ebp()         get_reg(ebp)
 #define get_esp()         get_reg(esp)
 
 #define set_reg(_r_,_v_)                                \
-   asm volatile ("mov %0, %%"#_r_::"m"(_v_):"memory")
+   asm volatile ("mov %0, %%"#_r_::"r"(_v_))
+   //asm volatile ("mov %0, %%"#_r_::"m"(_v_):"memory")
 
 #define set_edi(val)      set_reg(edi,val)
 #define set_ebp(val)      set_reg(ebp,val)

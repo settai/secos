@@ -25,6 +25,9 @@
 #define MC_EXCP    18
 #define XF_EXCP    19
 
+#define IRQ0_EXCP     32
+#define SYSCALL_EXCP  80
+
 /*
 ** Exceptions with error code
 */

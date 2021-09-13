@@ -1,0 +1,268 @@
+hit <ctl+a> <h> <enter>, for Qemu help
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1)
+
+
+iPXE (http://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+07F8CA10+07ECCA10 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from Floppy...
+GRUB Loading stage2............[01;01H[2J
+    GNU GRUB  version 0.94  (639K lower / 129920K upper memory)[04;02H┌─────────────────────────────────────────────────────────────────────────┐[05;02H│[05;76H│[06;02H│[06;76H│[07;02H│[07;76H│[08;02H│[08;76H│[09;02H│[09;76H│[10;02H│[10;76H│[11;02H│[11;76H│[12;02H│[12;76H│[13;02H│[13;76H│[14;02H│[14;76H│[15;02H│[15;76H│[16;02H│[16;76H│[17;02H└─────────────────────────────────────────────────────────────────────────┘
+      Use the ↑ and ↓ keys to select which entry is highlighted.
+      Press enter to boot the selected OS, 'e' to edit the
+      commands before booting, or 'c' for a command-line.[05;78H [05;03H[0;30;47m SecOS  [05;10H[05;11H                                                                 [06;03H[0m                                                                         [07;03H                                                                         [08;03H                                                                         [09;03H                                                                         [10;03H                                                                         [11;03H                                                                         [12;03H                                                                         [13;03H                                                                    [13;70H[13;71H     [14;03H                                                                         [15;03H                                                                         [16;03H                                                                         [16;78H [01;01H[2J  Booting 'SecOS'
+
+root   (hd0,0)
+ Filesystem type is fat, partition type 0x6
+kernel /kernel.elf
+   [Multiboot-elf, <0x300000:0xc:0x0>, <0x300010:0[06;50H[06;51Hx0:0x2000>, <0x302010:0x3540:
+0x2d00>, shtab=0x3092a8, entry=0x303010
+secos-281abbe-9b37ccb (c) Airbus
+
+IDT event
+ . int    #32
+ . error  0xffffffff
+ . cs:eip 0x8:0x304bfd
+ . ss:esp 0x304c1a:0x301fe8
+ . eflags 0x202
+
+- GPR
+eax     : 0x305c00
+ecx     : 0x0
+edx     : 0x0
+ebx     : 0x2be40
+esp     : 0x301fcc
+ebp     : 0x301fe0
+esi     : 0x2bfc2
+edi     : 0x2bfc3
+user1 esp : 0x5fffe3
+
+IDT event
+ . int    #32
+ . error  0xffffffff
+ . cs:eip 0x1b:0x30469a
+ . ss:esp 0x23:0x5fffe3
+ . eflags 0x202
+
+- GPR
+eax     : 0x7ff000
+ecx     : 0x305580
+edx     : 0x5ea1c
+ebx     : 0x2be40
+esp     : 0x4fffe3
+ebp     : 0x5ffffb
+esi     : 0x2bfc2
+edi     : 0x2bfc3
+
+IDT event
+ . int    #32
+ . error  0xffffffff
+ . cs:eip 0x1b:0x39f03ca6
+ . ss:esp 0x23:0x55
+ . eflags 0x286
+
+- GPR
+eax     : 0xd2f000e8
+ecx     : 0x2ef000f8
+edx     : 0x59f000e7
+ebx     : 0x39f00053
+esp     : 0x4fffe3
+ebp     : 0x41f000f8
+esi     : 0x4df000db
+edi     : 0x9ff000d4
+user1 esp : 0x5fffe3
+
+IDT event
+ . int    #32
+ . error  0xffffffff
+ . cs:eip 0x1b:0x30469a
+ . ss:esp 0x23:0x5fffe3
+ . eflags 0x202
+
+- GPR
+eax     : 0x7ff000
+ecx     : 0x305580
+edx     : 0xb68b8
+ebx     : 0x39f00053
+esp     : 0x4fffe3
+ebp     : 0x5ffffb
+esi     : 0x4df000db
+edi     : 0x9ff000d4
+
+IDT event
+ . int    #32
+ . error  0xffffffff
+ . cs:eip 0x1b:0x39f04a4e
+ . ss:esp 0x23:0x55
+ . eflags 0x217
+
+- GPR
+eax     : 0xff
+ecx     : 0x676e6974
+edx     : 0x39f000e4
+ebx     : 0x39f00053
+esp     : 0x4fffe3
+ebp     : 0x41f000f8
+esi     : 0x4df000db
+edi     : 0x9ff000d4
+user1 esp : 0x5fffe3
+
+IDT event
+ . int    #32
+ . error  0xffffffff
+ . cs:eip 0x1b:0x30469a
+ . ss:esp 0x23:0x5fffe3
+ . eflags 0x202
+
+- GPR
+eax     : 0x7ff000
+ecx     : 0x305580
+edx     : 0x12864e
+ebx     : 0x39f00053
+esp     : 0x4fffe3
+ebp     : 0x5ffffb
+esi     : 0x4df000db
+edi     : 0x9ff000d4
+
+IDT event
+ . int    #32
+ . error  0xffffffff
+ . cs:eip 0x1b:0x39f04478
+ . ss:esp 0x23:0x55
+ . eflags 0x297
+
+- GPR
+eax     : 0xff
+ecx     : 0x676e6974
+edx     : 0x39f000e4
+ebx     : 0x39f00053
+esp     : 0x4fffe3
+ebp     : 0x41f000f8
+esi     : 0x4df000db
+edi     : 0x9ff000d4
+user1 esp : 0x5fffe3
+
+IDT event
+ . int    #32
+ . error  0xffffffff
+ . cs:eip 0x1b:0x30469a
+ . ss:esp 0x23:0x5fffe3
+ . eflags 0x202
+
+- GPR
+eax     : 0x7ff000
+ecx     : 0x305580
+edx     : 0x196bbf
+ebx     : 0x39f00053
+esp     : 0x4fffe3
+ebp     : 0x5ffffb
+esi     : 0x4df000db
+edi     : 0x9ff000d4
+
+IDT event
+ . int    #32
+ . error  0xffffffff
+ . cs:eip 0x1b:0x39f03e8a
+ . ss:esp 0x23:0x55
+ . eflags 0x213
+
+- GPR
+eax     : 0xff
+ecx     : 0x676e6974
+edx     : 0x39f000e4
+ebx     : 0x39f00053
+esp     : 0x4fffe3
+ebp     : 0x41f000f8
+esi     : 0x4df000db
+edi     : 0x9ff000d4
+user1 esp : 0x5fffe3
+
+IDT event
+ . int    #32
+ . error  0xffffffff
+ . cs:eip 0x1b:0x30469a
+ . ss:esp 0x23:0x5fffe3
+ . eflags 0x202
+
+- GPR
+eax     : 0x7ff000
+ecx     : 0x305580
+edx     : 0x211748
+ebx     : 0x39f00053
+esp     : 0x4fffe3
+ebp     : 0x5ffffb
+esi     : 0x4df000db
+edi     : 0x9ff000d4
+
+IDT event
+ . int    #32
+ . error  0xffffffff
+ . cs:eip 0x1b:0x39f0599e
+ . ss:esp 0x23:0x55
+ . eflags 0x213
+
+- GPR
+eax     : 0xff
+ecx     : 0x676e6974
+edx     : 0x39f000e4
+ebx     : 0x39f00053
+esp     : 0x4fffe3
+ebp     : 0x41f000f8
+esi     : 0x4df000db
+edi     : 0x9ff000d4
+user1 esp : 0x5fffe3
+
+IDT event
+ . int    #32
+ . error  0xffffffff
+ . cs:eip 0x1b:0x30469a
+ . ss:esp 0x23:0x5fffe3
+ . eflags 0x202
+
+- GPR
+eax     : 0x7ff000
+ecx     : 0x305580
+edx     : 0x28d89d
+ebx     : 0x39f00053
+esp     : 0x4fffe3
+ebp     : 0x5ffffb
+esi     : 0x4df000db
+edi     : 0x9ff000d4
+
+IDT event
+ . int    #32
+ . error  0xffffffff
+ . cs:eip 0x1b:0x39f048be
+ . ss:esp 0x23:0x55
+ . eflags 0x293
+
+- GPR
+eax     : 0xff
+ecx     : 0x676e6974
+edx     : 0x39f000e4
+ebx     : 0x39f00053
+esp     : 0x4fffe3
+ebp     : 0x41f000f8
+esi     : 0x4df000db
+edi     : 0x9ff000d4
+user1 esp : 0x5fffe3
+
+IDT event
+ . int    #32
+ . error  0xffffffff
+ . cs:eip 0x1b:0x30469a
+ . ss:esp 0x23:0x5fffe3
+ . eflags 0x202
+
+- GPR
+eax     : 0x7ff000
+ecx     : 0x305580
+edx     : 0x30331a
+ebx     : 0x39f00053
+esp     : 0x4fffe3
+ebp     : 0x5ffffb
+esi     : 0x4df000db
+edi     : 0x9ff000d4
+QEMU: Terminated
+

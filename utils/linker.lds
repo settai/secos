@@ -27,4 +27,13 @@ SECTIONS
    /DISCARD/ : { *(.note* .indent .comment)      } : phsetup
 
    __kernel_end__ = .;
+
+   . = 0x3c0000;
+   .sys_counter   : { KEEP(*(.syscall))   . = ALIGN(4); } : phsetup
+   
+   . = 0x400000;
+   .user1     : { KEEP(*(.user1))     . = ALIGN(4); } : phsetup
+
+   . = 0x800000;
+   .user2     : { KEEP(*(.user2))     . = ALIGN(4); } : phsetup
 }

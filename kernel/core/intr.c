@@ -3,6 +3,8 @@
 #include <debug.h>
 #include <info.h>
 
+#include "../../tp_exam/tp.h"
+
 extern info_t *info;
 extern void idt_trampoline();
 static int_desc_t IDT[IDT_NR_DESC];
@@ -24,8 +26,7 @@ void intr_init()
    set_idtr(idtr);
 }
 
-void __regparm__(1) intr_hdlr(int_ctx_t *ctx)
-{
+void debug_ctx(int_ctx_t *ctx){
    debug("\nIDT event\n"
          " . int    #%d\n"
          " . error  0x%x\n"
@@ -53,11 +54,28 @@ void __regparm__(1) intr_hdlr(int_ctx_t *ctx)
          ,ctx->gpr.ebp.raw
          ,ctx->gpr.esi.raw
          ,ctx->gpr.edi.raw);
-
-   uint8_t vector = ctx->nr.blow;
-
-   if(vector < NR_EXCP)
-      excp_hdlr(ctx);
-   else
-      debug("ignore IRQ %d\n", vector);
 }
+
+void __regparm__(1) intr_hdlr(int_ctx_t *ctx)
+{
+   uint8_t vector = ctx->nr.blow;
+   switch(vector){
+      case IRQ0_EXCP:
+         timer_hdlr(ctx);
+         break;
+
+      case SYSCALL_EXCP:
+         syscall_hdlr(ctx);
+         break;
+
+      default:
+         debug_ctx(ctx);
+         if(vector < NR_EXCP){
+            excp_hdlr(ctx);
+         }
+         else{ 
+            debug("ignore IRQ %d\n", vector);
+         }
+   }   
+}
+
